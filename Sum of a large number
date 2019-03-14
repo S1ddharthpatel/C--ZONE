@@ -17,7 +17,7 @@ int main()
         scanf("%d",&b[i]);
     }
 
-    for(i=n;i>=0;i--)
+    for(i=n-1;i>=0;i--)
     {
         sum[i]=a[i]+b[i];
         if(sum[i]>9)
