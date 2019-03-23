@@ -4,43 +4,73 @@
 
 char box[9], a, b, result;
 
+void ui()
+{
+        system("cls");
+        printf("\n\t\tTIC TAC TOE");
+        printf("\n\t\t~~~~~~~~~~~");
+        printf("\n\nPlayer 1 symbol x");
+        printf("\n\nPlayer 2 symbol o");
+}
+
+void print_boxes()
+{
+        printf("\n\n\t_%c_|_%c_|_%c_",box[1],box[2],box[3]);
+        printf("\n\t_%c_|_%c_|_%c_",box[4],box[5],box[6]);
+        printf("\n\t %c | %c | %c \n",box[7],box[8],box[9]);
+}
+
 char logic()
     {
 
           if((box[1]=='x' && box[2]=='x' && box[3]=='x') || (box[4]=='x' && box[5]=='x' && box[6]=='x') || (box[7]=='x' && box[8]=='x' && box[9]=='x'))
          {
+             ui();
+             print_boxes();
              printf("\n\n\t\t PLAYER 1 WINS\n\n");
              result='o';
          }
          else if((box[1]=='o' && box[2]=='o' && box[3]=='o') || (box[4]=='o' && box[5]=='o' && box[6]=='o') || (box[7]=='o' && box[8]=='o' && box[9]=='o'))
          {
+             ui();
+             print_boxes();
              printf("\n\n\t\t PLAYER 2 WINS\n\n");
              result='o';
          }
          else if ((box[1]=='x' && box[4]=='x' && box[7]=='x') || (box[2]=='x' && box[5]=='x' && box[8]=='x') ||( box[3]=='x' && box[6]=='x' && box[9]=='x'))
          {
+             ui();
+             print_boxes();
              printf("\n\n\t\t PLAYER 1 WINS\n\n");
              result='o';
          }
          else if ((box[1]=='o' && box[4]=='o' && box[7]=='o') || (box[2]=='o' && box[5]=='o' && box[8]=='o') || (box[3]=='o' && box[6]=='o' && box[9]=='o'))
          {
+             ui();
+             print_boxes();
              printf("\n\n\t\t PLAYER 2 WINS\n\n");
              result='o';
          }
          else if ((box[1]=='x' && box[5]=='x' && box[9]=='x') || (box[3]=='x' && box[5]=='x' && box[7]=='x'))
          {
+             ui();
+             print_boxes();
              printf("\n\n\t\t PLAYER 1 WINS\n\n");
              result='o';
          }
          else if ((box[1]=='o' && box[5]=='o' && box[9]=='o') || (box[3]=='o' && box[5]=='o' && box[7]=='o'))
          {
+             ui();
+             print_boxes();
              printf("\n\n\t\t PLAYER 2 WINS\n\n");
              result='o';
          }
         else if ( box[1]!='1' && box[2]!='2' && box[3]!='3' && box[4]!='4' &&  box[5]!='5' && box[6]!='6' && box[7]!='7' && box[8]!='8' && box[9]!='9' && result!='o')
          {
-           printf("\n\n\t\t THE MATCH IS DRAWN\n\n");
-           result='o';
+             ui();
+             print_boxes();
+             printf("\n\n\t\t THE MATCH IS DRAWN\n\n");
+             result='o';
          }
          else
          {
@@ -50,26 +80,16 @@ char logic()
          return result;
     }
 
-
 int main()
 {
-
 
     box[1]='1';box[2]='2';box[3]='3';box[4]='4';box[5]='5';box[6]='6';box[7]='7';box[8]='8';box[9]='9';
 
     do{
         one:
-        system("cls");
-        printf("\n\t\tTIC TAC TOE");
-        printf("\n\t\t~~~~~~~~~~~");
-        printf("\n\nPlayer 1 symbol x");
-        printf("\n\nPlayer 2 symbol o");
-
-
+        ui();
         printf("\n\n\t\t\t\tPlayer 1's turn");
-        printf("\n\n\t_%c_|_%c_|_%c_",box[1],box[2],box[3]);
-        printf("\n\t_%c_|_%c_|_%c_",box[4],box[5],box[6]);
-        printf("\n\t %c | %c | %c \n",box[7],box[8],box[9]);
+        print_boxes();
         printf("\n\t\t\t\tWhere do you want to play: ");
         fflush(stdin);
         scanf("%c" ,&a);
@@ -93,17 +113,9 @@ int main()
         }
 
         two:
-
-        system("cls");
-        printf("\n\t\tTIC TAC TOE");
-        printf("\n\t\t~~~~~~~~~~~");
-        printf("\n\nPlayer 1 symbol x");
-        printf("\n\nPlayer 2 symbol o");
-
+        ui();
         printf("\n\n\t\t\t\tPlayer 2's turn");
-        printf("\n\n\t_%c_|_%c_|_%c_",box[1],box[2],box[3]);
-        printf("\n\t_%c_|_%c_|_%c_",box[4],box[5],box[6]);
-        printf("\n\t %c | %c | %c \n",box[7],box[8],box[9]);
+        print_boxes();
         printf("\n\t\t\t\tWhere do you want to play: ");
         fflush(stdin);
         scanf("%c" ,&b);
