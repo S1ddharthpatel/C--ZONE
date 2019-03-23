@@ -54,7 +54,6 @@ char logic()
 int main()
 {
 
-    char box[9], a, b, result;
 
     box[1]='1';box[2]='2';box[3]='3';box[4]='4';box[5]='5';box[6]='6';box[7]='7';box[8]='8';box[9]='9';
 
