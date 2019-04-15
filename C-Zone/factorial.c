@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int fact(int n)
+int fact(int n)//recursive function
 {
     if(n==1)
     {return 1;}
@@ -9,7 +9,6 @@ int fact(int n)
         return n*fact(n-1);
     }
 }
-
 
 int main()
 {
