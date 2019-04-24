@@ -1,3 +1,9 @@
+/*
+
+Author: Siddharth Patel
+Program: Basic Calculator with 4 operations(+,-,*,/)
+
+*/
 #include<stdio.h>
 
 int main()
