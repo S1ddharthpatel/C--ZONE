@@ -1,3 +1,9 @@
+/* 
+
+Author: Siddharth Patel
+Program: Tic-Tac-Toe game
+
+*/
 #include<stdio.h>
 #include<conio.h>
 #include<stdlib.h>
@@ -13,7 +19,7 @@ void ui()
         printf("\n\nPlayer 2 symbol o");
 }
 
-void print_boxes()
+void print_boxes()//funtion to print the boxes with the updated values
 {
         printf("\n\n\t_%c_|_%c_|_%c_",box[1],box[2],box[3]);
         printf("\n\t_%c_|_%c_|_%c_",box[4],box[5],box[6]);
@@ -22,9 +28,10 @@ void print_boxes()
 
 char logic()
     {
-
-          if((box[1]=='x' && box[2]=='x' && box[3]=='x') || (box[4]=='x' && box[5]=='x' && box[6]=='x') || (box[7]=='x' && box[8]=='x' && box[9]=='x'))
-         {
+        
+          // checking horizontal rows
+          if((box[1]=='x' && box[2]=='x' && box[3]=='x') || (box[4]=='x' && box[5]=='x' && box[6]=='x') || (box[7]=='x' && box[8]=='x' && box[9]=='x')
+          {
              ui();
              print_boxes();
              printf("\n\n\t\t PLAYER 1 WINS\n\n");
@@ -37,6 +44,7 @@ char logic()
              printf("\n\n\t\t PLAYER 2 WINS\n\n");
              result='o';
          }
+         // checking vertical columns    
          else if ((box[1]=='x' && box[4]=='x' && box[7]=='x') || (box[2]=='x' && box[5]=='x' && box[8]=='x') ||( box[3]=='x' && box[6]=='x' && box[9]=='x'))
          {
              ui();
@@ -51,6 +59,7 @@ char logic()
              printf("\n\n\t\t PLAYER 2 WINS\n\n");
              result='o';
          }
+         // checking diagnals    
          else if ((box[1]=='x' && box[5]=='x' && box[9]=='x') || (box[3]=='x' && box[5]=='x' && box[7]=='x'))
          {
              ui();
