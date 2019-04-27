@@ -1,3 +1,8 @@
+/*
+Author: Siddharth Patel
+Program: Adding text to files
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -14,23 +19,19 @@ int main()
    }
    for(i=0;i<5;i++)
    {
-
-
-   printf("Enter num: ");
-   scanf("%d",&num);
-
-   fprintf(fptr,"%d\n",num);
+      printf("Enter num: ");
+      scanf("%d",&num);
+      fprintf(fptr,"%d\n",num);
     }
-fclose(fptr);
+   fclose(fptr);
 
-  fp = fopen("D:\program.txt", "r");
-    printf("data in a file\n");
-    for(i=0;i<5;i++)
-    {
-        fscanf(fp,"%d", no);
-        printf("%d\t ", no);
-
-    }
-    fclose(fp);
+   fp = fopen("D:\program.txt", "r");
+   printf("data in a file\n");
+   for(i=0;i<5;i++)
+   {
+       fscanf(fp,"%d", no);
+       printf("%d\t ", no);
+   }
+   fclose(fp);
    return 0;
 }
