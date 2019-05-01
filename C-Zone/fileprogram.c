@@ -1,6 +1,8 @@
 /*
+
 Author: Siddharth Patel
 Program: Adding text to files
+
 */
 
 #include <stdio.h>
