@@ -3,6 +3,7 @@
 Author: Siddharth Patel
 Program: Finding factorial of a number using recursive functions
 
+*/
 #include<stdio.h>
 
 int fact(int n)//recursive function
