@@ -8,7 +8,7 @@ Program: Tic-Tac-Toe game
 #include<conio.h>
 #include<stdlib.h>
 
-char box[9], a, b, result;
+char box[9], a, b, result; //global variables
 
 void ui()
 {
