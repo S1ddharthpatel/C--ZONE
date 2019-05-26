@@ -1,7 +1,7 @@
 /*
 
 Author: Siddharth Patel
-Program: Basic Calculator with 4 operations(+,-,*,/)
+Program: Basic Calculator with 4 basic operations(+,-,*,/)
 
 */
 #include<stdio.h>
@@ -49,8 +49,6 @@ int main()
 			case '/' : result=num1/num2;
 			break;
 		}
-
-
 
 		printf("\n\nThe result of %.2f %c %.2f is %.2f.", num1, operation, num2, result);
 
