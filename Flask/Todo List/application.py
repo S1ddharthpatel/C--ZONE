@@ -7,15 +7,13 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
-todos=[]
 
 @app.route("/", methods=["GET", "POST"])
 def todo():
-    #if session.get("notes") is None:
-     #   session["notes"] = []
+    if session.get("todos") is None:
+        session["todos"] = []
     if request.method == "POST":
         todo=request.form.get("todo")
-        # session["todo"].append(todo)
-        todos.append(todo)
+        session["todos"].append(todo)
 
-    return render_template("todo.html", todos=todos)
+    return render_template("todo.html", todos=session["todos"])
