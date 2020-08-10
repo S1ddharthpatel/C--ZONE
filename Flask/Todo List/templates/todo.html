@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To Do List</title>
+</head>
+<body>
+    <style>
+        body {
+            text-align: left;
+            background-color: rgb(247, 247, 138);
+        }
+        hr {
+            color: #141618;
+        }
+    </style>
+    <h1>To Do List</h1>
+    <hr align="left" width="300" style="c">
+    <ul>
+        {% for todo in todos %}
+        <li>{{ todo }}</li>
+        {% endfor %}
+    </ul>
+    <form action="{{ url_for('todo') }}" method="post">
+        <input placeholder="Enter the task" name="todo" type="text" >
+        <button type="submit">Add Task</button>
+    </form>
+</body>
+
+</html>
